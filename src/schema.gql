@@ -1,0 +1,22 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Post {
+  id: Int!
+  title: String!
+  author: Author!
+}
+
+type Author {
+  id: Int!
+  name: String
+  posts: [Post!]!
+}
+
+type Query {
+  findAllAuthors: [Author!]!
+  findAuthorById(id: Int!): Author!
+  findAllPosts: [Post!]!
+  findPostById(id: Int!): Post!
+}
